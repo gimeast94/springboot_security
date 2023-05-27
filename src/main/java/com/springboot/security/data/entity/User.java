@@ -33,7 +33,7 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private String name;
 
-    @ElementCollection(fetch = FetchType.LAZY)
+    @ElementCollection(fetch = FetchType.EAGER)
     @Builder.Default
     private List<String> roles = new ArrayList<>();
 
